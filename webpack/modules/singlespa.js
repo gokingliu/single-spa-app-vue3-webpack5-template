@@ -4,7 +4,6 @@ const { name } = require('../../package.json');
 
 module.exports = {
   externals: ['single-spa'],
-  optimization: { splitChunks: {} },
   output: { libraryTarget: 'system' },
   plugins: [
     /* config.plugin('SystemJSPublicPathWebpackPlugin') */
