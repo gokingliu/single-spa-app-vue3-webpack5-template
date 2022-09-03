@@ -1,8 +1,8 @@
-const AutoImport = require('unplugin-auto-import/dist/webpack.js');
-const Components = require('unplugin-vue-components/dist/webpack.js');
-const { ElementPlusResolver } = require('unplugin-vue-components/dist/resolvers.js');
-const IconsResolver = require('unplugin-icons/dist/resolver.js');
-const Icons = require('unplugin-icons/dist/webpack.js');
+const AutoImport = require('unplugin-auto-import/webpack');
+const Components = require('unplugin-vue-components/webpack');
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers');
+const IconsResolver = require('unplugin-icons/resolver');
+const Icons = require('unplugin-icons/webpack');
 
 module.exports = {
   plugins: [
@@ -26,6 +26,6 @@ module.exports = {
       ],
       dts: 'components.d.ts',
     }),
-    Icons({ autoInstall: true }),
+    Icons({ autoInstall: true, compiler: 'vue3' }),
   ],
 };
